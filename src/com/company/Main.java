@@ -59,15 +59,22 @@ public class Main extends Application {
 
                 int numberguessed;
                 //System.out.println("Number guess is "+ numberguessed);
-                System.out.println("random number is :" +random);
-                System.out.println("Count is : " + count);
+                //System.out.println("random number is :" +random);
+                //System.out.println("Count is : " + count);
 
                 numberdisplay.setPromptText("Guess a number ");
                 numberguessed = Integer.parseInt(numberdisplay.getText());
                 count++;
                 if (numberguessed > random) {
                     System.out.println("You guess too high, try again ");
-                    //System.out.println("Count is :" + count);
+                    if ( count==1)
+                    {
+                        System.out.println("you have 2 more Lives left");
+                    }
+                    if ( count ==2)
+                    {
+                        System.out.println("You have 1 more Life left");
+                    }
                     if (count == 3) {
                         System.out.println("Oops...No More Lives left!!!");
                         window.close();
